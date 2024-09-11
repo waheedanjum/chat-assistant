@@ -31,6 +31,8 @@ export const useApi = () => {
         // Check if API key is not found
         if (!apiKey) {
             const errorMessage = 'No API key found';
+            errorMessage ? console.log(errorMessage) : "";
+
             if (Platform.OS === 'web') {
                 window.alert(errorMessage);
             } else {
